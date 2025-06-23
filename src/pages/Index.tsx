@@ -1,4 +1,5 @@
 
+
 import { ExternalLink, FileText, MapPin, Calendar, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -41,8 +42,8 @@ const Index = () => {
                 <FileText className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-3xl font-bold text-white mb-2">עדכוני חנתר</h1>
-                <p className="text-slate-300">מערכת דיווחים ועדכונים</p>
+                <h1 className="text-3xl font-bold text-white mb-2 text-center">עדכוני חנתר</h1>
+                <p className="text-slate-300 text-center">מערכת דיווחים ועדכונים</p>
               </div>
             </div>
             
@@ -71,32 +72,15 @@ const Index = () => {
                 className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10 backdrop-blur-sm cursor-pointer"
                 onClick={() => handleLinkClick(link.url)}
               >
-                <CardHeader className="pb-4">
-                  <div className={`w-12 h-12 bg-gradient-to-r ${link.color} rounded-lg flex items-center justify-center mb-3`}>
+                <CardHeader className="pb-4 text-center">
+                  <div className={`w-12 h-12 bg-gradient-to-r ${link.color} rounded-lg flex items-center justify-center mb-3 mx-auto`}>
                     <IconComponent className="w-6 h-6 text-white" />
                   </div>
-                  <CardTitle className="text-white text-xl">{link.title}</CardTitle>
+                  <CardTitle className="text-white text-xl text-center">{link.title}</CardTitle>
                 </CardHeader>
               </Card>
             );
           })}
-        </div>
-
-        {/* Small Side Button */}
-        <div className="flex justify-center">
-          <Card className="bg-slate-800/30 border-slate-700 backdrop-blur-sm">
-            <CardContent className="p-4">
-              <Button
-                onClick={() => handleLinkClick('https://docs.google.com/spreadsheets/d/1nPXscDwRWJBOI9ivAdCCpr6jN7qVyFO5Tx0JNe7W8wc/edit?resourcekey=&gid=542382109#gid=542382109')}
-                variant="outline"
-                className="bg-slate-700 border-slate-600 text-white hover:bg-slate-600 transition-all duration-300 hover:scale-105"
-              >
-                <FileText className="w-4 h-4 mr-2" />
-                כניסת חנתר
-                <ExternalLink className="w-4 h-4 ml-2" />
-              </Button>
-            </CardContent>
-          </Card>
         </div>
       </div>
 
@@ -111,3 +95,4 @@ const Index = () => {
 };
 
 export default Index;
+
