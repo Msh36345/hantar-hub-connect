@@ -1,5 +1,4 @@
-
-import { ExternalLink, Github, MapPin, Calendar, Users, FileText } from "lucide-react";
+import { ExternalLink, FileText, MapPin, Calendar, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -49,15 +48,15 @@ const Index = () => {
               </div>
             </div>
             
-            {/* GitHub Link */}
+            {/* כניסת חנתר Link */}
             <Button
               variant="outline"
               size="sm"
-              onClick={() => handleLinkClick('https://github.com')}
+              onClick={() => handleLinkClick('https://docs.google.com/spreadsheets/d/1nPXscDwRWJBOI9ivAdCCpr6jN7qVyFO5Tx0JNe7W8wc/edit?resourcekey=&gid=542382109#gid=542382109')}
               className="bg-slate-800 border-slate-600 text-white hover:bg-slate-700 transition-all duration-300 hover:scale-105"
             >
-              <Github className="w-4 h-4 mr-2" />
-              GitHub
+              <FileText className="w-4 h-4 mr-2" />
+              כניסת חנתר
             </Button>
           </div>
         </div>
