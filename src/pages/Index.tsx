@@ -1,13 +1,9 @@
 
-
-import { ExternalLink, FileText, MapPin, Calendar, Users, Video, ChevronDown } from "lucide-react";
+import { ExternalLink, FileText, MapPin, Calendar, Users, Clipboard } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { useState } from "react";
 
 const Index = () => {
-  const [showZoomLinks, setShowZoomLinks] = useState(false);
-
   const mainLinks = [
     {
       title: "נוכחות",
@@ -26,17 +22,12 @@ const Index = () => {
       url: "https://docs.google.com/forms/d/e/1FAIpQLScoBAu7e3l5MFnH-VaZAze7neiCVnQkXA3gIomjRdKJ9uJQnA/viewform",
       icon: MapPin,
       color: "from-green-500 to-green-600"
-    }
-  ];
-
-  const zoomLinks = [
-    {
-      title: "כיתת גליל",
-      url: "https://zoom.us/j/95819552982?pwd=BuL7cpUZyo3NT1B8eOR7704vTiiF5F.1"
     },
     {
-      title: "מפקדה",
-      url: "https://zoom.us/j/91384377380?pwd=7RLFJK2Kl1dMO0J6IwK2u6A1c7ciCk.1"
+      title: "פרטי כיתה",
+      url: "https://docs.google.com/spreadsheets/d/1-lINpn_H4jbrHsXO8vrA8J3S5KvFSoVS5uTk8_tg8I8/edit?gid=0#gid=0",
+      icon: Clipboard,
+      color: "from-orange-500 to-orange-600"
     }
   ];
 
@@ -95,39 +86,6 @@ const Index = () => {
               </Card>
             );
           })}
-
-          {/* Zoom Links Card */}
-          <Card className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-orange-500/10 backdrop-blur-sm">
-            <CardHeader 
-              className="pb-4 text-center cursor-pointer"
-              onClick={() => setShowZoomLinks(!showZoomLinks)}
-            >
-              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mb-3 mx-auto">
-                <Video className="w-6 h-6 text-white" />
-              </div>
-              <CardTitle className="text-white text-xl text-center flex items-center justify-center gap-2">
-                קישורי זום
-                <ChevronDown className={`w-4 h-4 transition-transform ${showZoomLinks ? 'rotate-180' : ''}`} />
-              </CardTitle>
-            </CardHeader>
-            {showZoomLinks && (
-              <CardContent className="pt-0">
-                <div className="space-y-2">
-                  {zoomLinks.map((zoomLink, index) => (
-                    <Button
-                      key={index}
-                      variant="outline"
-                      className="w-full bg-slate-700 border-slate-600 text-white hover:bg-slate-600 transition-all duration-300"
-                      onClick={() => handleLinkClick(zoomLink.url)}
-                    >
-                      <Video className="w-4 h-4 mr-2" />
-                      {zoomLink.title}
-                    </Button>
-                  ))}
-                </div>
-              </CardContent>
-            )}
-          </Card>
         </div>
       </div>
 
@@ -142,4 +100,3 @@ const Index = () => {
 };
 
 export default Index;
-
