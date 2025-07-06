@@ -41,7 +41,7 @@ const Index = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative container mx-auto px-4 py-8">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-center">
             <div className="flex items-center space-x-4">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
                 <FileText className="w-6 h-6 text-white" />
@@ -51,12 +51,14 @@ const Index = () => {
                 <p className="text-slate-300 text-center">מערכת דיווחים ועדכונים</p>
               </div>
             </div>
-            
-            {/* כניסת חנתר Link */}
+          </div>
+          
+          {/* כניסת חנתר Link - positioned at top */}
+          <div className="flex justify-center mt-6">
             <Button
               variant="outline"
               size="sm"
-              onClick={() => handleLinkClick('https://docs.google.com/spreadsheets/d/1nPXscDwRWJBOI9ivAdCCpr6jN7qVyFO5Tx0JNe7W8wc/edit?resourcekey=&gid=542382109#gid=542382109')}
+              onClick={() => handleLinkClick('https://docs.google.com/spreadsheets/d/1nPXscDwRWJBOI9ivAdCCpr6jN7qVyFO5Tx0JNe7W8wc/edit?resourcekey=&gid=1627124560#gid=1627124560')}
               className="bg-slate-800 border-slate-600 text-white hover:bg-slate-700 transition-all duration-300 hover:scale-105"
             >
               <FileText className="w-4 h-4 mr-2" />
